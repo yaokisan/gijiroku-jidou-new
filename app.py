@@ -93,8 +93,8 @@ def get_page_content(page_id: str) -> str:
             for block in results:
                 block_type = block.get("type")
                 if block_type in ["paragraph", "heading_1", "heading_2", "heading_3", "bulleted_list_item", "numbered_list_item", "quote", "code"]: # quoteもついでに追加
-                content_key = block_type # codeブロックもrich_textを持つため、特別な処理は不要
-                rich_text = block.get(content_key, {}).get("rich_text", [])
+                    content_key = block_type # codeブロックもrich_textを持つため、特別な処理は不要
+                    rich_text = block.get(content_key, {}).get("rich_text", [])
                     for text_part in rich_text:
                         all_text += text_part.get("plain_text", "")
                     all_text += "\n" # 各ブロックの後に改行を追加
