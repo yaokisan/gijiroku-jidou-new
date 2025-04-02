@@ -1,0 +1,10 @@
+# APIキーなどの秘密情報ファイルを除外
+.streamlit/secrets.toml
+
+# Pythonのキャッシュファイルなども除外しておくと良い
+__pycache__/
+*.pyc
+
+# OS固有のファイル (Mac/Windows)
+.DS_Store
+Thumbs.db
